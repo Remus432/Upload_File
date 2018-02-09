@@ -1,6 +1,7 @@
 var express = require('express');
 var mustacheExpress = require('mustache-express');
 var path = require('path');
+var port = process.env.PORT || 3000
 
 var app = express();
 
@@ -14,6 +15,6 @@ app.get('/', function(req, res) {
   res.render('index.html');
 });
 
-app.listen(1337, function() {
+app.listen(port, function() {
   console.log('Running on port 1337');
 });
